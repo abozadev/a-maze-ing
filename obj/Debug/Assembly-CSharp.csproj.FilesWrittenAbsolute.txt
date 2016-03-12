@@ -1,0 +1,15 @@
+/home/amahon/programming/Unity/screamit/Temp/bin/Debug/UnityEngine.dll
+/home/amahon/programming/Unity/screamit/Temp/bin/Debug/UnityEditor.dll
+/home/amahon/programming/Unity/screamit/Temp/bin/Debug/UnityEngine.UI.dll
+/home/amahon/programming/Unity/screamit/Temp/bin/Debug/UnityEngine.Networking.dll
+/home/amahon/programming/Unity/screamit/Temp/bin/Debug/Assembly-CSharp-firstpass.dll
+/home/amahon/programming/Unity/screamit/Temp/bin/Debug/Assembly-CSharp-firstpass.dll.mdb
+/home/amahon/programming/Unity/screamit/Temp/bin/Debug/Unity.DataContract.dll
+/home/amahon/programming/Unity/screamit/Temp/bin/Debug/Mono.Cecil.dll
+/home/amahon/programming/Unity/screamit/Temp/bin/Debug/Unity.SerializationLogic.dll
+/home/amahon/programming/Unity/screamit/Temp/bin/Debug/ICSharpCode.NRefactory.dll
+/home/amahon/programming/Unity/screamit/Temp/bin/Debug/Unity.UNetWeaver.dll
+/home/amahon/programming/Unity/screamit/Temp/bin/Debug/Unity.UNetWeaver.dll.mdb
+/home/amahon/programming/Unity/screamit/Temp/bin/Debug/Unity.CecilTools.dll
+/home/amahon/programming/Unity/screamit/Temp/bin/Debug/Mono.Cecil.Pdb.dll
+/home/amahon/programming/Unity/screamit/Temp/bin/Debug/Mono.Cecil.Mdb.dll
