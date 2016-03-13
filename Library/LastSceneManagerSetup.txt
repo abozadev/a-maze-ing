@@ -1,1 +1,7 @@
-sceneSetups: []
+sceneSetups:
+- path: Assets/menu.unity
+  isLoaded: 1
+  isActive: 1
+- path: Assets/screamit_main.unity
+  isLoaded: 1
+  isActive: 0

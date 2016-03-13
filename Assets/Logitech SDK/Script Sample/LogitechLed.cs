@@ -11,41 +11,43 @@ public class LogitechLed : MonoBehaviour {
 	
 	int red,blue,green;
 	public string effectLabel;
-	
-	// Use this for initialization
-	void Start () {
+    Job myJob;
+    two_pulse pulse2;
+    int count;
+    bool myPulse = true;
+    Timer timeer;
 
+    // Use this for initialization
+    void Start () {
+
+        timeer = new Timer();
 		blue = 0;
 		red = 100;
 		green = 0;
 		LogitechGSDK.LogiLedInit();
 		LogitechGSDK.LogiLedSaveCurrentLighting();
 
+        count = 0;    
 
-        int finishRed = 0;
-        int finishBlue = 0;
-        int finishGreen = 0;
+        myJob = new Job();
+        pulse2 = new two_pulse();
 
-        LogitechGSDK.LogiLedPulseSingleKey(LogitechGSDK.keyboardNames.N, finishRed, finishGreen, finishBlue, red, green, blue, 1000, true);
-        LogitechGSDK.LogiLedPulseSingleKey(LogitechGSDK.keyboardNames.B, finishRed, finishGreen, finishBlue, red, green, blue, 1000, true);
-        LogitechGSDK.LogiLedPulseSingleKey(LogitechGSDK.keyboardNames.H, finishRed, finishGreen, finishBlue, red, green, blue, 1000, true);
-        LogitechGSDK.LogiLedPulseSingleKey(LogitechGSDK.keyboardNames.J, finishRed, finishGreen, finishBlue, red, green, blue, 1000, true);
-        LogitechGSDK.LogiLedPulseSingleKey(LogitechGSDK.keyboardNames.G, finishRed, finishGreen, finishBlue, red, green, blue, 1000, true);
-        LogitechGSDK.LogiLedPulseSingleKey(LogitechGSDK.keyboardNames.T, finishRed, finishGreen, finishBlue, red, green, blue, 1000, true);
-        LogitechGSDK.LogiLedPulseSingleKey(LogitechGSDK.keyboardNames.Y, finishRed, finishGreen, finishBlue, red, green, blue, 1000, true);
-        LogitechGSDK.LogiLedPulseSingleKey(LogitechGSDK.keyboardNames.U, finishRed, finishGreen, finishBlue, red, green, blue, 1000, true);
-        LogitechGSDK.LogiLedPulseSingleKey(LogitechGSDK.keyboardNames.I, finishRed, finishGreen, finishBlue, red, green, blue, 1000, true);
-        LogitechGSDK.LogiLedPulseSingleKey(LogitechGSDK.keyboardNames.SIX, finishRed, finishGreen, finishBlue, red, green, blue, 1000, true);
-        LogitechGSDK.LogiLedPulseSingleKey(LogitechGSDK.keyboardNames.EIGHT, finishRed, finishGreen, finishBlue, red, green, blue, 1000, true);
-
-        LogitechGSDK.LogiLedSetLightingForKeyWithKeyName(LogitechGSDK.keyboardNames.A, 0, 100, 0);
+        StartCoroutine( myJob.ThreadFunction());
+        //StartCoroutine(pulse2.ThreadFunction());
+        
     }
 
 
     // Update is called once per frame
     void Update () {
 
-        
+        if (count == 100)
+        {
+            StartCoroutine(myJob.ThreadFunction());
+            //else StartCoroutine(pulse2.ThreadFunction());
+            count = 0;
+        }
+        else count += 1;
 	}
 	
 	void OnDestroy () {
@@ -53,4 +55,11 @@ public class LogitechLed : MonoBehaviour {
 		LogitechGSDK.LogiLedRestoreLighting();
      	LogitechGSDK.LogiLedShutdown();
 	}
+
+
+    public void changePulse()
+    {
+        myPulse = false;
+    }
+            
 }

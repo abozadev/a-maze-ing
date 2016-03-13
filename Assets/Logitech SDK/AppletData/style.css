@@ -1,0 +1,39 @@
+* {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+}
+
+.title {
+    text-align: center;
+}
+
+.btn-xlarge {
+    padding: 18px 28px;
+    font-size: 22px; //change this to your desired size
+    line-height: normal;
+    -webkit-border-radius: 8px;
+       -moz-border-radius: 8px;
+            border-radius: 8px;
+
+	margin-top: 20px;
+}
+
+#scream {
+    height: 100%;
+    width: 100%;
+}
+
+#door {
+    height: 100%;
+    width: 100%;
+}
+
+#girl {
+    height: 100%;
+    width: 100%;
+}
+
+#lights {
+    height: 100%;
+    width: 100%;
+}
